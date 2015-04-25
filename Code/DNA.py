@@ -6,13 +6,12 @@ def CountNucleotides(input):
 
     return "a: " + str(a) + " c: " + str(c) + " g: " + str(g) + " t: " + str(t)
 
-def PatternCount(text, pattern):
+def PatternStartIndices(text, pattern):
     count = 0
     indexes = ""
 
     for i in range(len(text)):
         if text[i:i+len(pattern)] == pattern:
-            print(i)
             indexes += str(i) + " "
             count += 1
 
